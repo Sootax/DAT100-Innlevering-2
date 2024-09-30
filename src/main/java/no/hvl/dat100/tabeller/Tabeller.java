@@ -11,9 +11,22 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		if (tabell.length == 1) {
+			return "[" + tabell[0] + "]";
+		} else if (tabell.length == 0) {
+			return "[]";
+		}
+		String tabellStr = "";
+		for (int x = 0; x < tabell.length; x++) {
+			if (x == 0) {
+				tabellStr += "[" + tabell[x] + ",";
+			} else if (x == tabell.length - 1) {
+				tabellStr += tabell[x] + "]";
+			} else {
+				tabellStr += tabell[x] + ",";
+			}
+		}
+		return tabellStr;
 	}
 
 	// c)
