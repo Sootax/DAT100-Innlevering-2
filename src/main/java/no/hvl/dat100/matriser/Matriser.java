@@ -4,39 +4,61 @@ public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
-		for (int[] tabell : matrise) {
-			for (int x : tabell) {
-				System.out.print(x + " ");
+	
+		for ( int rad = 0; rad < matrise.length; rad++) {
+			for (int verdi = 0; verdi < matrise[rad].length; verdi++) {
+				System.out.print(matrise[rad][verdi] + " ");
 			}
+			System.out.println();
 		}
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
+		
 		String matriseStr = "";
-		for (int[] tabell : matrise) {
-			for (int x : tabell) {
-				matriseStr += x + " ";
+		for (int rad = 0; rad < matrise.length; rad++) {
+			for (int kolonne = 0; kolonne < matrise[rad].length; kolonne++) {
+				matriseStr += matrise[rad][kolonne];
+				if (kolonne < matrise[rad].length - 1) {
+					matriseStr += " ";
+				}
 			}
-			matriseStr += "\n";
+			matriseStr += " \n";
 		}
 		return matriseStr;
 	}
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
 	
+			int[][] nyMatrise = new int[matrise.length][];
+			
+			for ( int rad = 0; rad < matrise.length; rad++) {
+				nyMatrise[rad] = new int[matrise[rad].length];
+				
+				for (int verdi = 0; verdi < matrise[rad].length; verdi++) {
+					nyMatrise[rad][verdi] = matrise[rad][verdi] * tall;
+				}
+			}
+			return nyMatrise;
+		
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+			
+			int x = 0;
+			int y = 0;
 		
+			if (a.length == b.length && a[x][y] == b[x][y]) {
+				return true;
+			} 
+			
+			else {
+				return false;
+			}
+					
 	}
 	
 	// e)
