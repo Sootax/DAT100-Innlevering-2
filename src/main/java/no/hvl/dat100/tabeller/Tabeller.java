@@ -41,20 +41,26 @@ public class Tabeller {
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// Øyvind
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		for (int element : tabell) {
+			if (element == tall) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		// Øyvind
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		int pos = 0;
+		for (int element : tabell) {
+			if (element == tall) {
+				return pos;
+			} else {
+				pos++;
+			}
+		}
+		return -1;
 	}
 
 	// f)
