@@ -41,6 +41,8 @@ public class Tabeller {
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
+		// Øyvind
+
 		// TODO
 		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
 
@@ -48,6 +50,8 @@ public class Tabeller {
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
+
+		// Øyvind
 
 		// TODO
 		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
